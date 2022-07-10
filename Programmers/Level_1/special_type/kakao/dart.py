@@ -15,6 +15,10 @@ ex)
 1S*2T*3S => 1S*, 2T*, 3S => 4 + 16 + 3	
 '''
 
+'''
+프로그래머스 사이트에서 다른사람들 풀이보면서 다시 복습하기!!!
+'''
+
 def solution(string) :
 
     string = string.replace('10','!')
