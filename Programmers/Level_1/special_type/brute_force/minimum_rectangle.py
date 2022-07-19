@@ -18,16 +18,6 @@ flow
 2. 가장 큰 값이 속한 팀(예를 들어 가로)이 아닌 팀에서 방향을 바꾸어 가며 답을 구한다
 '''
 
-'''
-알아볼사항
-1. tc 1번째꺼만 통과. 왜 안풀리는지 면밀히 체크.. => 코드 고민만 해보고 당장 안되면 바로 답보기. 이거 매우 간단함.
-2. 밑에 if에 for문 두개
-3. brute force 일단 흐름 맞는지 부터 체크
-4. .copy() 이거!! 그냥 변수대입으로만 풀면 이거 원본에도 영향준다.
-5. ★★★★ 코딩테스트를 왜 공부하는가, 어떻게 학습방법 설정할것인가에 대한 고민필요.
-    => 지금은 무지성 심각한 하드코딩
-    => 어차피 지금 당장 응시는 안할거니까 당장 내 작업에서 활용도 높은 주제중에서 & 타입에 자체에 대한 공부가 먼저 필요할듯
-'''
 
 def solution(card_list) :
     # step1 : 가장 큰 값 고르기
@@ -64,7 +54,7 @@ def solution(card_list) :
     else :
         for idx, card in enumerate(card_list) :
             if idx != h_max_idx :
-                width_new = width.copy()
+                width_new = width.copy() # 이거안하면 원본에도 영향준다!!!!
                 width_new[idx] = height[idx]
                 result_new = h_max * max(width_new)
                 if result_new < result :
