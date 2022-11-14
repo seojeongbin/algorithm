@@ -5,7 +5,7 @@ type : dfs
 - 입력) 노드 수, 링크 수, 시작 노드 번호
 - 다음줄부터는 연결 된 노드
 - 출력) 노드별 방문순서
-<about greedy>
+<about dfs>
 - 인접행렬로 표현하든지, (문제가 틀이 있는 형태경우) 리스트로 정보를 받든.. graph 위치 정보 정의가 먼저임
 - 방문여부를 체크할 것도 필요. 노드번호별로 뭔가를 만들거나, 틀에 방문한여부(= 이동불가 체크)를 하거나
 '''
@@ -63,3 +63,8 @@ if __name__ == "__main__" :
 결국 시간초과는 해결못하고 구글링 정답으로 걍 냈음..
 지금이야 공부용으로 하더라도 나중에는 시간관련해서도 생각해봐야함!
 '''
+# 입출력 이렇게 하면 해결됨.
+for _ in range(num_link):
+    tmpL=list(map(int,sys.stdin.readline().split()))
+    graph[tmpL[0]].append(tmpL[1])
+    graph[tmpL[1]].append(tmpL[0])
